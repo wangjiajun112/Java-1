@@ -1,0 +1,38 @@
+P1
+Java 是什么？ 是一家高级编程语言
+Java由sun公司研发， 现在属于Oracle公司
+Java之父是詹姆斯.高斯林
+Java的三大技术平台：JavaSE（java技术的核心和基础)  JavaEE（企业级应用开发的一套解决方案）  JavaME(小型版，针对移动设备应用的解决方案）
+
+P2
+开发一个Java程序并运行的主要步骤
+① 安装JDK，Java的产品叫JDK，必须安装JDK才能使用Java。新手入门建议安装JDK21(LTS)
+进入Oracle官网： https://www.oracle.com/cn/java/technologies/downloads/#java21
+选择windows系统， 点击x64 Installes: https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe (sha256)
+验证是否安装成功：看Java、JavaC是否可用；
+win+R 输入cmd 进入控制台
+输入Javac -version   java -version
+java.exe 是执行工具， javac.exe是编译工具
+JVM： Java虚拟机， Java程序是在这个虚拟机里面运行的
+核心类库： Java自己写好的程序，给程序员自己的程序调用的
+JRE：Java的运行环境
+
+② 配置环境变量
+Path环境变量可用于配置程序的所在路径，以方便在命令行窗口的任意目录下直接通过命令启动该程序
+用户变量： 只会对指定用户生效
+系统变量： 对使用该设备的所有用户生效
+JDK安装时，一般会自动给Java， javac配置path环境
+ 建议为JDK再配置Java-HOME环境变量
+
+p3
+IDEA创建Java项目的代码结构
+project--module--package--class
+使用idea进行Java编码时，就需要先按顺序进行创建。
+psvm + enter =  public static void main(String[] args) { }
+"hello, world".sout = System.out.println("hello,world");
+
+p4
+IDEA安装AI编程插件通义灵码
+
+
+
