@@ -1,0 +1,78 @@
+IDEA 相关设置
+① 主题设置
+② 字体设置
+③ 背景色设置
+④ 常用快捷键设置：
+    main 生成main方法，
+    sout 用于输出
+    ctrl + D 等于向下复制一行
+    ctrl + Y 删除当前行
+    ctrl + x 剪切当前行
+    ctrl + alt + shit + l格式化代码
+    alt + shift + 上下箭头 等于上下移动代码
+    ctrl + / 对代码进行注释
+
+IDEA 常用操作
+① 打开工程
+
+
+
+Java 基本语法
+① 注释
+② 字面量 ：就是程序中能直接书写的数据，重点在于搞清楚Java程序中数据的书写格式。
+③ 变量注释
+④ 关键字， 标识符
+
+package com.hello.speedkey;
+public class speedkeydemo {
+    public static void main(String[] args) { //main方法是代码的入口，没有main方法将无法执行
+        printhelloworld();
+        System.out.println(printlnsum());
+        //打印一行英文诗
+        System.out.println("There was a young lady named Bright,");
+    }
+
+    //打印三行“Hello World”
+    public static void printhelloworld() {
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+        System.out.println("Hello World!");
+    }
+
+    //求1-100的和
+    public static int printlnsum() {
+        int sum = 0;
+        for (int i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+}
+
+
+//Java语法之变量
+变量就是内存中的一块区域，可以理解成一个盒子，用来装程序要处理的数据。
+定义格式： 数据类型 变量名称 = 数据;
+int age = 18;
+
+变量里数据的存储原理：
+计算机底层只有0，1 按照二进制的形式表示数据
+其他数据如何存储？
+char
+
+数据类型：基本数据类型、 引用数据类型
+基本数据类型：
+①整型：byte short int long   
+当整数字面量超出 int 类型范围时，即使它在 long 类型范围内，也需要在数字后面加上 L 或 l 后缀来明确表示这是一个 long 类型的字面量
+②浮点数：float double
+③字符型：char
+④布尔型 boolean
+
+
+关键字、标识符
+Java关键字是Java语言中已经被赋予特定含义的保留字，不能用作标识符（如变量名、方法名、类名等）
+Java中的标识符是用来命名变量、方法、类、包和其他程序元素的名称
+变量名：建议首字母小写，满足“驼峰模式”
+类名：建议首字母大写，满足驼峰模式。
+
+
