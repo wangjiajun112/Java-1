@@ -1,0 +1,93 @@
+Java基础语法：
+Java开发的软件，功能的最小单元是方法
+方法：特定任务或操作的代码块，代表一个功能，它可以接受数据进行处理，并返回一个处理后的结果。
+方法的完整定义格式：求任意两个整数的格式
+public static int sum (int a, int b){ // 这里的a, b 是形参名称。 sum 是方法名称
+    int sum = a + b;
+    return sum;
+
+}
+
+方法是否要就接受数据？
+方法是否要返回数据？
+public static void print(){
+  ("dayin").sout
+}
+
+方法的一些注意事项：
+① 方法可以重载
+一个类中，出现多个方法的名称相同，但是他们的形参列表是不同的，那么这些方法就是被重载的。
+    public static int getSum(int a, int b){
+        return a + b;
+    }
+
+    public static int getSum(String a, String b){
+        return Integer.parseInt(a) + Integer.parseInt(b);
+    }
+
+② 无返回值的方法中可以直接通过单独的return; 立即结束当前方法的执行
+
+
+
+类型转换-自动类型转换
+类型范围小的变量，可以直接赋值给类型范围大的变量
+
+强制类型转换：
+int i = 20;
+byte j = (byte) i;
+
+如果
+int n = 1500;
+byte m = (byte) n;// 会报错， 1500超过了byte的容量
+int 是4个字节，32未
+byte是1个字节 8位，所以强制转换会只剩下八位数据。
+为什么要进行类型转换？
+调用别人的方法时，可以用不同的类型去接受不同类型的数据
+自动类型转换就是小范围转向大范围，可以自动转换，不用人为参与
+强制类型转换，大范围转小范围。语法：数据类型 变量 = （数据类型）变量、数据
+可能会出现数据丢失
+小数转整数会直接截去小数部分
+
+表达式的自动类型提升，一般按照返回值类型定义方法就好
+byte short char 会默认自动转为int返回
+
+输入输出
+输出： 把程序中的数据展示出来
+输入： 程序读取用户键盘输入的数据， 通过scanner程序来实现
+scanner是Java提供的API，程序员可以直接调用
+
+API 应用程序编程接口： Java自己写好的程序，程序可以直接调用
+使用scanner接受用户键盘输入数据的三个步骤
+① 导包：import java.util Scanner
+② 新建对象，代表得到键盘扫描的东西
+Scanner sc = new Scanner(System.in);
+③ 等待用户输入数据
+String name = sc.next();
+
+运算符：
+①三元运算符： 
+条件表达式?值1 ：值2
+先计算关系表达式的值，如果值为true，返回值1， 如果为false，返回值2
+a > b ? a > c ? a : c : b > c ? b ： c;
+② 逻辑运算符
+逻辑与
+逻辑或
+逻辑非
+逻辑异或 ^ 条件的结果相同返回false.
+短路 与 && 左边为false 右边不执行
+短路或 || 左边为true 右边不执行。
+
+
+总结： 健康计算器
+开发一个简单的健康计算器应用，他可以接受用户的输入，并计算出用户的BMI 和基础代谢率
+scanner基本语法：
+① 导入scanner类
+import java util.Scanner
+② 创建scanner对象
+Scanner scanner = new Scanner(System.in)
+③ 使用scanner读取不同的数据类型
+String name = scanner.next// 读取下一个字符串
+char c = scanner.next().charAt(0);//读取下一个字符
+int num = scanner.nextInt();// 读取下一个整型
+String line = scanner.nextLine();// 读取写一行字符串
+
