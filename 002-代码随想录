@@ -1,0 +1,21 @@
+27 移除元素
+使用快慢指针
+
+class solution{
+  public static int (int[] nums, int val){
+    int slow = 0;//这个slow是之后需要return的值，所以需要定义为全局变量， 而不能在之后的for循环里面进行定义，不然会return报错。
+    for(int fast = 0; fast < nums.length; fast ++){ //① fast可以在for循环里面进行定义，因为这个不用return，可以是局部变量。 fast<length 或者 fast<=length
+      if(nums[fast] != val){ //我们要删除指定值， 也就是留下不等于val 的值。
+        nums[slow] = nums[fast];
+        slow++;
+      }
+    }return slow; //再将slow值返回即可
+  }
+
+
+}
+
+
+
+
+
