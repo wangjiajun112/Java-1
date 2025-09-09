@@ -1,0 +1,124 @@
+分支结构：
+① if分支结构
+② switch分支
+case给出的值不允许重复，只能是自变量，不能是变量
+switch穿透性能解决什么问题？
+存在多个case分支的代码是一样的，可以把一个代码写到一个case快，其他case块通过穿透性能，穿透到该case块即可，这样能简化代码。
+③do while循环
+先执行一次，再判断， 也就是说至少执行一次。
+
+
+生成验证码
+public static String getCode(int n){
+        String code = "";
+        for (int i = 0; i < n; i++){
+            //随机生成数字或大小写字母
+            int type = (int)(Math.random()*3);// 这里的type只有0，1，2三种取值
+            switch (type){ 
+                case 0:
+                    //生成数字
+                    int num = (int)(Math.random()*10);
+                    code += num;
+                    break;
+                case 1:
+                    //生成大写字母
+                    char ch = (char)(Math.random()*26 + 'A');
+                    code += ch;
+                    break;
+                case 2:
+                    //生成小写字母
+                    char ch1 = (char)(Math.random()*26 + 'a');
+                    code += ch1;
+            }
+        }
+
+
+        return code;
+    }
+
+
+day4-数组：程序里的数据存储
+1、假设用变量存储学生名称，实现随机点名小程序。
+public static void dianming(){
+  String[] students = {"小王","小李","小张","小赵","小钱","小孙","小李","小王","小王","小王","小王","小王","小王","小王"}
+  int index = (int)(Math.random()*students.length);
+}
+2、定义数组的方法
+① 动态初始化数组 int[] a = new int [3]; 定义一个长度为3 的int型数组。
+② 静态初始化数组 int[] arr = {1, 2, 3}; 定义并初始化一个数组。
+③ 匿名数组 
+
+
+day 5: 面向对象编程-Java的核心
+程序里的数据存储方案： 变量、数组、二维数组、对象
+什么是对象：
+对象是一种特殊的数据结构，可以用来记住一个事物的数据，从而代表该食物。
+eg:
+
+public static void main(String[] args){
+  Star s1 = new Star();
+  s1.name = "赵丽颖";
+  s1.age = 36;
+  s1.height = 165;
+//创建杨幂的star对象，并设置属性
+  Star s2 = new Star();
+  s2.name = "杨幂"
+  s2.age = 37;
+  s2.height = 166;
+  s2.weight = 45;
+}
+
+① 设计对象的模板，也就是对象的设计图：类
+public class Star {
+  String name;
+  int age;
+  double height;
+  double weight;
+}
+② 调用类来定义对象
+public class test {
+    public static void main(String[] args) {
+      Star s1 = new Star();
+      s1.name = "战魂哥";
+      s1.age = 12;
+      s1.height = 176;
+      s1.weight = 76;
+}
+}
+
+对象到底是啥？
+对象本质上是一个特殊的数据结构。对象是用类new出来的，有了类就可以创建出对象。
+
+面向对象编程这种套路是怎么回事？
+万物皆对象， 谁的数据谁存储。
+
+类的基本语法： 
+① 构造器
+public class Student {
+    //构造器
+    public Student() {
+    }
+}
+构造器有什么特点？
+创建对象时，对象会去调用构造器。
+常见应用场景：
+创建对象时，同时完成对对象成员变量（属性）的初始化赋值。
+Student s2 = new Student("张安", "男", 18);
+
+
+this关键字
+this 就是一个变量，可以用在方法中，来拿到当前对象。
+this的应用场景：this主要用来解决变量名称的冲突问题。
+在定义的一个类中，首先我们会自己定义一些基础变量如age name什么
+如果再在构造器中再次定义了name 那么将会出现形参和之前name的冲突
+那么就可以用this.name 来指向之前的name，便于区分
+
+
+
+
+
+
+
+
+
+
